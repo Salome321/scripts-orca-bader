@@ -20,22 +20,19 @@ This script is run in a directory countaining only one xyz coordinate file. Make
 ## 4. cube_density.sh
 This scrpit should be run outside the coordinate files directories.\
 Edit relevant file path.\
-It automates cube_density.py, bader and local_charges.py:\
-It copies cube_density.py in each directory, runs it (it will generate an *out.cube file that is the difference of the anion - neutral cube files).\
+It automates bader and local_charges.py:\
+It uses an *out.cube file as an input for bader charges calculations.\
 It copies bader in each directory and runs bader charges on this out.cube file.\
-It copies local_charges.py in each directory and runs it to calculate Bader and Mulliken charges and their vmd scripts for visualisation.
+It copies local_charges.py in each directory and runs it to create scripts for visualisation of Bader and Mulliken charges in vmd.
 
-### 4.1. cube_density.py
-This script uses the density files *anion.cube and *neutral.cube to calculate their difference anion - neutral ; stored into ID_out.cube.
-
-### 4.2. bader 
+### 4.1. bader 
 This program developed by Henkelman Group outputs the total charge associated with each atom, and the zero flux surfaces defining the Bader volumes.
 Calculates bader charges.\
 Run ./bader -c bader <cube file> -v\
 Returns ACF.dat, AVF.dat and BCF.dat files
 - W. Tang, E. Sanville, and G. Henkelman A grid-based Bader analysis algorithm without lattice bias, J. Phys.: Condens. Matter 21, 084204 (2009).
 
-### 4.3 local_charges.py
+### 4.2. local_charges.py
 This scripts creates visualisation vmd scripts for Bader and Mulliken.\
 Run python local_charges.py <sp file with Mulliken charges eg. sp_enutral.out> <dat file with Bader charges eg. ACF.dat> <coordinate file eg. geo_opt.xyz>\
 Creates bader_vmdscript.txt. Visualise in vmd by typing source bader_vmdscript.txt.
