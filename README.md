@@ -2,7 +2,7 @@
 Scripts to operate Orca and initiate Bader charge calculations.
 
 ## 1. split.sh
-This script splits a txt file of coordinates into individual txt files with the coordinates of each molecules, by using the separator $$$$ between the coordinates in the original file /n
+This script splits a txt file of coordinates into individual txt files with the coordinates of each molecules, by using the separator $$$$ between the coordinates in the original file \n
 Run ./split.sh <name of coordinate file>
 Splits coordinates into 4 parts (part1 part2 part3 part4 directories), inside each directory is one fourth of the coordinates files, named file1.xyz, file2.xyz, file10.xyz etc.
 The coordinate files end with .xyz, you might need to remove the .xyz ending that has been added to some other files (eg. inner_run.sh.xyz)
