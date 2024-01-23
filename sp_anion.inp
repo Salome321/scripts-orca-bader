@@ -1,0 +1,13 @@
+!B3LYP RIJK D3BJ
+!def2-TZVPD def2/JK
+!PAL8
+
+* xyzfile -1 2 geo_opt.xyz
+
+%plots
+dim1 100
+dim2 100
+dim3 100
+Format Gaussian_Cube
+ElDens("anion.cube");
+end
