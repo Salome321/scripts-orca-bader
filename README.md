@@ -1,5 +1,5 @@
-# scripts-orca-bader
-Scripts to operate Orca and initiate Bader charge calculations.
+# Scripts for Orca and Bader
+Scripts to operate Orca and initiate Bader charge calculations. Orca is used to perform the geometry optimiations of molecules, and calculate the single point energy of their anion, cation and neutral forms. Bader is used to show the distribution of the extra electron aquired by the anion associated with each atom in the molecule.
 
 ## 1. split.sh
 This script splits a txt file of coordinates into individual txt files with the coordinates of each molecules, by using the separator $$$$ between the coordinates in the original file\
